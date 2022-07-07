@@ -1,23 +1,31 @@
+/* sinatxe do ES6 --- Node.js só uso até ES5
 import express from 'express'
 import dotenv from 'dotenv'
 import mustache from 'mustache-express'
 import path from 'path'
 import mainRoutes from './routes'
+import { mustache } from 'mustache-express';
+*/
+const express = require('express');
+const dotenv = require('dotenv');
+const mustache = require('mustache-express');
+const path = require('path');
+const mainRoutes = require('./routes/index');
 
-dotenv.config()
+dotenv.config();
 
-const server = express()
+const server = express();
 
-server.set('view engine', 'mustache')
-server.set('views', path.join(__dirname, 'views'))
-server.engine('mustache', mustache())
-server.use(express.static(path.join(__dirname, '../public')))
+server.set('view engine', 'mustache');
+server.set('views', path.join(__dirname, 'views'));
+server.engine('mustache', mustache());
+server.use(express.static(path.join(__dirname, '../public')));
 
 //Rotas
-server.use(mainRoutes)
+server.use(mainRoutes);
 
 server.use((req, res) => {
-	res.send('Página não encontrada')
+	res.send('Página não encontrada');
 })
 
-server.listen(process.env.PORT)
+server.listen(process.env.PORT);

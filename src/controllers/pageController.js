@@ -1,17 +1,22 @@
-import { Request, Response } from 'express'
+const express = require('express');
 
-export const home = (req, res) => {
+const home = (req, res) => {
 	res.render('pages/page')
 }
 
-export const dogs = (req, res) => {
+const dogs = (req, res) => {
 	//res.render('pages/page')
 }
 
-export const cats = (req, res) => {
+const cats = (req, res) => {
 	//res.render('pages/page')
 }
 
-export const fishes = (req, res) => {
+const fishes = (req, res) => {
 	//res.render('pages/page')
 }
+
+module.exports.home = home;
+module.exports.dogs = dogs;
+module.exports.cats = cats;
+module.exports.fishes = fishes;

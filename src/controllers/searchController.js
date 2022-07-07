@@ -1,5 +1,7 @@
-import { Request, Response } from 'express'
+const express = require('express');
 
-export const search = (req, res) => {
+const search = (req, res) => {
 	//res.render('pages/page')
 }
+
+module.exports.search = search;

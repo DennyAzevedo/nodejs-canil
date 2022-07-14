@@ -1,5 +1,5 @@
 const express = require('express');
-const Router = require('Router');
+const Router = require('router');
 const PageController = require('../controllers/pageController');
 const SearchController = require('../controllers/searchController');
 

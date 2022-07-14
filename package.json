@@ -2,7 +2,10 @@
   "name": "canil",
   "version": "1.0.0",
   "description": "### Desenvolvido em JavaScript e Node.js",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
